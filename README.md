@@ -1,35 +1,38 @@
 # desenvolvimento-web.3
 entregavel de desenvolvimento web semana 3
-let pontos = 50;
-pontos = pontos + 10;
-console.log("Pontos:", pontos);
+function classificarNota(nota) {
+  if (nota >= 6) return "Aprovado";
+  else return "Reprovado";
+}
+console.log(classificarNota(7), classificarNota(4));
 
-const MAX_PONTOS = 100;
-console.log("MAX_PONTOS:", MAX_PONTOS);
-
-try {
-  MAX_PONTOS = 150;
-} catch (erro) {
-  console.log("Erro ao reatribuir const:", erro.name, "-", erro.message);
+const corSemaforo = "verde";
+switch (corSemaforo) {
+  case "vermelho": console.log("Pare"); break;
+  case "amarelo": console.log("Atenção"); break;
+  case "verde": console.log("Siga"); break;
 }
 
-let texto = "Olá";
-let numero = 42;
-let booleano = true;
-let indefinido;
-let nulo = null;
+for (let i = 1; i <= 10; i++) console.log(`5 x ${i} = ${5 * i}`);
 
-console.log("typeof texto:", typeof texto);
-console.log("typeof numero:", typeof numero);
-console.log("typeof booleano:", typeof booleano);
-console.log("typeof indefinido:", typeof indefinido);
-console.log("typeof nulo:", typeof nulo);
+let c = 5;
+while (c >= 1) { console.log(c); c--; }
 
-let usuario = "Lucas";
-let nivel = "Avançado";
+for (let i = 1; i <= 20; i++) console.log(i, i % 2 === 0 ? "par" : "ímpar");
 
-let fraseTemplate = `O usuário ${usuario} está no nível ${nivel}.`;
-let fraseConcatenada = "O usuário " + usuario + " está no nível " + nivel + ".";
+let j = 1;
+while (j <= 20) { console.log(j, j % 2 === 0 ? "par" : "ímpar"); j++; }
 
-console.log(fraseTemplate);
-console.log(fraseConcatenada);
+function diaDaSemana(num) {
+  switch (num) {
+    case 1: return "Domingo";
+    case 2: return "Segunda";
+    case 3: return "Terça";
+    case 4: return "Quarta";
+    case 5: return "Quinta";
+    case 6: return "Sexta";
+    case 7: return "Sábado";
+    default: return "Número inválido";
+  }
+}
+console.log(diaDaSemana(3), diaDaSemana(9));
